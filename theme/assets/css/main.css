@@ -367,6 +367,14 @@
     background-position: right center;
     color: var(--speck-white);
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.85), 0 4px 18px rgba(0, 0, 0, 0.7);
+    /* Guarantee enough height so the background photo always shows fully
+       framed instead of getting visually squeezed at smaller paddings. */
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+}
+.speck-section--photo > .speck-container {
+    width: 100%;
 }
 .speck-section--photo p {
     opacity: 0.92;
@@ -575,5 +583,8 @@
     }
     .speck-btn--block {
         width: 100%;
+    }
+    .speck-section--photo {
+        min-height: 340px;
     }
 }
