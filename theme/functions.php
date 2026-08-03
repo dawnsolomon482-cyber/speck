@@ -131,6 +131,130 @@ function speck_register_section_shortcodes() {
 add_action( 'init', 'speck_register_section_shortcodes' );
 
 /**
+ * Single source of truth for the 7 Speck dealerships -- used by the
+ * "Our Dealerships" cards and by the AutoDealer schema markup below,
+ * so the data only has to be maintained in one place.
+ */
+function speck_get_dealerships() {
+	return array(
+		array(
+			'name'    => 'Speck Chevrolet of Prosser',
+			'street'  => '314 Sixth St',
+			'city'    => 'Prosser',
+			'state'   => 'WA',
+			'zip'     => '99350',
+			'phone'   => '(509) 786-2666',
+			'url'     => 'https://www.speckchevyprosser.com/',
+			'brands'  => array( 'chevrolet' ),
+		),
+		array(
+			'name'    => 'Speck Nissan of Sunnyside',
+			'street'  => '61 E Allen Rd',
+			'city'    => 'Sunnyside',
+			'state'   => 'WA',
+			'zip'     => '98944',
+			'phone'   => '(509) 837-5501',
+			'url'     => 'https://www.specknissan.com/',
+			'brands'  => array( 'nissan' ),
+		),
+		array(
+			'name'    => 'Speck Hyundai of Tri-Cities',
+			'street'  => '2910 W Clearwater Ave',
+			'city'    => 'Kennewick',
+			'state'   => 'WA',
+			'zip'     => '99336',
+			'phone'   => '(509) 542-0234',
+			'url'     => 'https://www.speckhyundai.com/',
+			'brands'  => array( 'hyundai' ),
+		),
+		array(
+			'name'    => 'Speck Buick GMC of Tri-Cities',
+			'street'  => '9610 Sandifur Pkwy',
+			'city'    => 'Pasco',
+			'state'   => 'WA',
+			'zip'     => '99301',
+			'phone'   => '(509) 783-9399',
+			'url'     => 'https://www.speckbuickgmc.com/',
+			'brands'  => array( 'buick', 'gmc' ),
+		),
+		array(
+			'name'    => 'Speck Chrysler Jeep Dodge Ram',
+			'street'  => '125 E Allen Rd',
+			'city'    => 'Sunnyside',
+			'state'   => 'WA',
+			'zip'     => '98944',
+			'phone'   => '(509) 882-5005',
+			'url'     => 'https://www.speckcdjr.com/',
+			'brands'  => array( 'chrysler', 'jeep', 'dodge', 'ram' ),
+		),
+		array(
+			'name'    => 'Speck Ford of Prosser',
+			'street'  => '630 Wine Country Rd',
+			'city'    => 'Prosser',
+			'state'   => 'WA',
+			'zip'     => '99350',
+			'phone'   => '(509) 786-2155',
+			'url'     => 'https://www.speckford.com/',
+			'brands'  => array( 'ford' ),
+		),
+		array(
+			'name'    => 'C. Speck Motors',
+			'street'  => '61 E Allen Rd',
+			'city'    => 'Sunnyside',
+			'state'   => 'WA',
+			'zip'     => '98944',
+			'phone'   => '(509) 837-5501',
+			'url'     => 'https://www.cspeckmotors.com/',
+			'brands'  => array(),
+		),
+	);
+}
+
+/**
+ * AutoDealer + LocalBusiness JSON-LD schema for every Speck dealership,
+ * output on the homepage so search engines and AI answer engines (Google
+ * AI Overviews, ChatGPT, etc.) can read each location's name, address,
+ * phone, and site directly as structured data.
+ */
+function speck_output_schema() {
+	if ( ! is_front_page() ) {
+		return;
+	}
+
+	$graph = array();
+
+	foreach ( speck_get_dealerships() as $d ) {
+		$graph[] = array(
+			'@type'   => 'AutoDealer',
+			'name'    => $d['name'],
+			'url'     => $d['url'],
+			'telephone' => $d['phone'],
+			'address' => array(
+				'@type'           => 'PostalAddress',
+				'streetAddress'   => $d['street'],
+				'addressLocality' => $d['city'],
+				'addressRegion'   => $d['state'],
+				'postalCode'      => $d['zip'],
+				'addressCountry'  => 'US',
+			),
+			'parentOrganization' => array(
+				'@type' => 'Organization',
+				'name'  => 'Speck Family Dealerships',
+				'url'   => home_url( '/' ),
+			),
+		);
+	}
+
+	$schema = array(
+		'@context' => 'https://schema.org',
+		'@graph'   => $graph,
+	);
+
+	echo '<script type="application/ld+json">' . wp_json_encode( $schema ) . '</script>' . "\n";
+}
+add_action( 'wp_head', 'speck_output_schema' );
+
+/**
  * Elementor: mark theme location templates as full-width where relevant.
  */
 function speck_elementor_locations( $elementor_theme_manager ) {
