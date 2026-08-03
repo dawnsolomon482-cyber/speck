@@ -448,12 +448,15 @@
     padding: 22px 0;
 }
 .speck-footer__social a {
-    color: var(--speck-white);
     display: flex;
+    transition: transform 0.15s ease;
+}
+.speck-footer__social a:hover {
+    transform: translateY(-3px);
 }
 .speck-footer__social svg {
-    width: 26px;
-    height: 26px;
+    width: 34px;
+    height: 34px;
 }
 .speck-footer__bottom {
     background: var(--speck-white);
