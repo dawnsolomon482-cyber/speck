@@ -73,7 +73,7 @@ h1, h2, h3 { font-family: var(--speck-font-heading); line-height: 1.25; margin: 
 .speck-home section:nth-child(even):not(.speck-section--photo):not(.speck-brands):not(.speck-dealerships) { background: var(--speck-accent); }
 .speck-home h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: .7em; }
 .speck-home section > .speck-container > p { font-size: 1.2rem; max-width: 760px; margin: 0 auto; }
-.speck-section--photo { background-color: var(--speck-secondary); background-size: cover; background-position: right center; color: #fff; text-shadow: 0 2px 6px rgba(0,0,0,.85), 0 4px 18px rgba(0,0,0,.7); min-height: 480px; display: flex; align-items: center; }
+.speck-section--photo { background-color: var(--speck-secondary); background-size: contain; background-repeat: no-repeat; background-position: center; color: #fff; text-shadow: 0 2px 6px rgba(0,0,0,.85), 0 4px 18px rgba(0,0,0,.7); aspect-ratio: 3.6 / 1; min-height: 260px; display: flex; align-items: center; }
 .speck-section--photo > .speck-container { width: 100%; }
 .speck-section--photo p { opacity: .92; }
 .speck-home .speck-dealerships { background: var(--speck-white); color: var(--speck-secondary); }
@@ -140,7 +140,7 @@ h1, h2, h3 { font-family: var(--speck-font-heading); line-height: 1.25; margin: 
     .speck-hero__ctas { flex-direction: column; }
     .speck-btn--block { width: 100%; }
     .speck-dealership-grid { grid-template-columns: 1fr; }
-    .speck-section--photo { min-height: 340px; }
+    .speck-section--photo { min-height: 160px; aspect-ratio: auto; }
 }
 </style>
 

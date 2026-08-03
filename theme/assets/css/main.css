@@ -358,18 +358,20 @@
     margin-right: auto;
 }
 
-/* Sections with a Speck vehicle-photo background (Specials, Financing, Service, About) */
+/* Sections with a Speck dealer ad banner background (Specials, Financing, Service).
+   Uses "contain" so the full ad graphic (logo, pricing, disclaimer text) is
+   always visible in one piece -- never cropped by "cover". */
 .speck-section--photo {
     background-color: var(--speck-secondary);
-    background-size: cover;
-    /* Biased right so the vehicle (not the promo ad copy on the left half
-       of these banner photos) stays fully in frame instead of cropping. */
-    background-position: right center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     color: var(--speck-white);
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.85), 0 4px 18px rgba(0, 0, 0, 0.7);
-    /* Guarantee enough height so the background photo always shows fully
-       framed instead of getting visually squeezed at smaller paddings. */
-    min-height: 480px;
+    /* Full-bleed banner: box height follows the image's own aspect ratio so
+       nothing gets letterboxed or squeezed. */
+    aspect-ratio: 3.6 / 1;
+    min-height: 260px;
     display: flex;
     align-items: center;
 }
@@ -585,6 +587,7 @@
         width: 100%;
     }
     .speck-section--photo {
-        min-height: 340px;
+        min-height: 160px;
+        aspect-ratio: auto;
     }
 }
