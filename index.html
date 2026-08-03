@@ -106,10 +106,12 @@ h1, h2, h3 { font-family: var(--speck-font-heading); line-height: 1.25; margin: 
 .speck-dealership-card p { margin: 0; font-size: 1.05rem; opacity: .75; }
 .speck-dealership-card .speck-btn { margin-top: 14px; align-self: flex-start; }
 
-.speck-footer__social { background: var(--speck-primary); display: flex; justify-content: center; align-items: center; gap: 28px; padding: 22px 0; }
+.speck-footer__social { background: var(--speck-primary); display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 22px 0 18px; }
+.speck-footer__social-icons { display: flex; justify-content: center; align-items: center; gap: 28px; }
 .speck-footer__social a { display: flex; transition: transform .15s ease; }
 .speck-footer__social a:hover { transform: translateY(-3px); }
 .speck-footer__social svg { width: 34px; height: 34px; }
+.speck-footer__social-label { color: #fff; font-size: .85rem; font-weight: 600; letter-spacing: .03em; margin: 0; }
 .speck-footer__bottom { background: #fff; border-top: 1px solid var(--speck-border); padding: 12px 0; }
 .speck-footer__bottom-inner { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px; font-size: .8rem; color: #444; }
 .speck-footer__bottom-inner a { color: var(--speck-primary); }
@@ -356,9 +358,12 @@ h1, h2, h3 { font-family: var(--speck-font-heading); line-height: 1.25; margin: 
 
 <footer class="speck-footer">
 	<div class="speck-footer__social">
-		<a href="#" aria-label="Facebook"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#1877F2"/><path d="M25.5 20.5H22V32h-4.7V20.5H14.5V16.3H17.3v-2.7c0-3.1 1.5-6.1 6.4-6.1h4.4v4.1h-3.2c-.6 0-1.5.3-1.5 1.7v3h4.7Z" fill="#fff"/></svg></a>
-		<a href="#" aria-label="YouTube"><svg viewBox="0 0 40 40"><rect x="2" y="8" width="36" height="24" rx="7" fill="#FF0000"/><path d="M16.5 15.5v9l8-4.5Z" fill="#fff"/></svg></a>
-		<a href="#" aria-label="Instagram"><svg viewBox="0 0 40 40"><defs><radialGradient id="speckIgGradient2" cx="30%" cy="107%" r="150%"><stop offset="0%" stop-color="#fdf497"/><stop offset="8%" stop-color="#fdf497"/><stop offset="41%" stop-color="#fd5949"/><stop offset="58%" stop-color="#d6249f"/><stop offset="100%" stop-color="#285AEB"/></radialGradient></defs><rect x="1" y="1" width="38" height="38" rx="11" fill="url(#speckIgGradient2)"/><rect x="10.5" y="10.5" width="19" height="19" rx="6" fill="none" stroke="#fff" stroke-width="2.2"/><circle cx="20" cy="20" r="5.3" fill="none" stroke="#fff" stroke-width="2.2"/><circle cx="26.3" cy="13.7" r="1.6" fill="#fff"/></svg></a>
+		<div class="speck-footer__social-icons">
+			<a href="#" aria-label="Facebook"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#1877F2"/><path d="M25.5 20.5H22V32h-4.7V20.5H14.5V16.3H17.3v-2.7c0-3.1 1.5-6.1 6.4-6.1h4.4v4.1h-3.2c-.6 0-1.5.3-1.5 1.7v3h4.7Z" fill="#fff"/></svg></a>
+			<a href="#" aria-label="YouTube"><svg viewBox="0 0 40 40"><rect x="2" y="8" width="36" height="24" rx="7" fill="#FF0000"/><path d="M16.5 15.5v9l8-4.5Z" fill="#fff"/></svg></a>
+			<a href="#" aria-label="Instagram"><svg viewBox="0 0 40 40"><defs><radialGradient id="speckIgGradient2" cx="30%" cy="107%" r="150%"><stop offset="0%" stop-color="#fdf497"/><stop offset="8%" stop-color="#fdf497"/><stop offset="41%" stop-color="#fd5949"/><stop offset="58%" stop-color="#d6249f"/><stop offset="100%" stop-color="#285AEB"/></radialGradient></defs><rect x="1" y="1" width="38" height="38" rx="11" fill="url(#speckIgGradient2)"/><rect x="10.5" y="10.5" width="19" height="19" rx="6" fill="none" stroke="#fff" stroke-width="2.2"/><circle cx="20" cy="20" r="5.3" fill="none" stroke="#fff" stroke-width="2.2"/><circle cx="26.3" cy="13.7" r="1.6" fill="#fff"/></svg></a>
+		</div>
+		<p class="speck-footer__social-label">Follow Speck Family Dealerships</p>
 	</div>
 	<div class="speck-footer__bottom">
 		<div class="speck-container speck-footer__bottom-inner">
