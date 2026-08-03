@@ -394,46 +394,48 @@
 /* Dealership cards */
 .speck-dealership-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 18px;
 }
 .speck-dealership-card {
     background: var(--speck-white);
     color: var(--speck-secondary);
     border: 1px solid var(--speck-border);
     border-radius: var(--speck-radius);
-    padding: 32px;
+    padding: 18px;
     box-shadow: var(--speck-shadow);
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 6px;
     text-align: left;
 }
 .speck-dealership-card__brands {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
     flex-wrap: wrap;
     width: 100%;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
 }
 .speck-dealership-card__brands img {
-    height: 40px;
+    height: 26px;
     width: auto;
 }
 .speck-dealership-card h3 {
-    font-size: 1.4rem;
+    font-size: 1.05rem;
     margin-bottom: 0;
 }
 .speck-dealership-card__address,
 .speck-dealership-card__phone {
     margin: 0;
-    font-size: 1.05rem;
+    font-size: 0.9rem;
     color: #555;
 }
 .speck-dealership-card .speck-btn {
-    margin-top: 14px;
+    margin-top: 8px;
     align-self: flex-start;
+    padding: 0.55em 1.2em;
+    font-size: 0.85rem;
 }
 
 /* Footer: a solid brand-color social bar, then a thin white credit line
