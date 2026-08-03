@@ -33,12 +33,17 @@ Text Domain: speck-modern-theme
 
 html {
     font-size: 18px;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 body {
     font-family: var(--speck-font-body);
     color: var(--speck-secondary);
     margin: 0;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
     line-height: 1.65;
     background: var(--speck-white);
 }
