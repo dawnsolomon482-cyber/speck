@@ -344,8 +344,8 @@
     background: var(--speck-accent);
 }
 .speck-home .speck-dealerships {
-    background: var(--speck-secondary);
-    color: var(--speck-white);
+    background: var(--speck-white);
+    color: var(--speck-secondary);
 }
 .speck-home h2 {
     font-size: clamp(2rem, 4vw, 3rem);
