@@ -11,9 +11,9 @@ Text Domain: speck-modern-theme
 
 :root {
     /* Brand accent -- client-requested gray in place of the blue CTA color. */
-    --speck-primary: #9ca3af;      /* Speck CTA gray */
-    --speck-primary-hover: #7c8591; /* Speck CTA hover gray */
-    --speck-link: #6b7280;         /* Speck link gray */
+    --speck-primary: #6b7280;      /* Speck CTA gray (darker) */
+    --speck-primary-hover: #545b66; /* Speck CTA hover gray */
+    --speck-link: #4b5563;         /* Speck link gray */
     --speck-secondary: #222222;    /* Speck body text (--main-color) */
     --speck-accent: #f5f5f5;       /* Light gray */
     --speck-white: #ffffff;
