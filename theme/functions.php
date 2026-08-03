@@ -55,9 +55,9 @@ function speck_enqueue_assets() {
 add_action( 'wp_enqueue_scripts', 'speck_enqueue_assets' );
 
 /**
- * Customizer: lets you replace the hero and section background photos
- * from WP Admin > Appearance > Customize > Speck Backgrounds, instead
- * of editing theme files. Falls back to the bundled sample images.
+ * Customizer: lets you replace the hero background photo from
+ * WP Admin > Appearance > Customize > Speck Backgrounds, instead
+ * of editing theme files. Falls back to the bundled sample image.
  */
 function speck_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
@@ -69,11 +69,7 @@ function speck_customize_register( $wp_customize ) {
 	);
 
 	$images = array(
-		'speck_hero_bg'      => __( 'Hero Background (Shop By Vehicle)', 'speck-modern-theme' ),
-		'speck_specials_bg'  => __( 'Current Specials Background', 'speck-modern-theme' ),
-		'speck_financing_bg' => __( 'Financing Background', 'speck-modern-theme' ),
-		'speck_service_bg'   => __( 'Service & Parts Background', 'speck-modern-theme' ),
-		'speck_about_bg'     => __( 'About Us Background', 'speck-modern-theme' ),
+		'speck_hero_bg' => __( 'Hero Background (Shop By Vehicle)', 'speck-modern-theme' ),
 	);
 
 	foreach ( $images as $setting => $label ) {
