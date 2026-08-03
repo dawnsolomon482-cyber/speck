@@ -366,7 +366,7 @@
        of these banner photos) stays fully in frame instead of cropping. */
     background-position: right center;
     color: var(--speck-white);
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.85), 0 4px 18px rgba(0, 0, 0, 0.7);
 }
 .speck-section--photo p {
     opacity: 0.92;
@@ -398,8 +398,18 @@
 /* Dealership cards */
 .speck-dealership-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 32px;
+}
+@media (max-width: 900px) {
+    .speck-dealership-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    .speck-dealership-grid {
+        grid-template-columns: 1fr;
+    }
 }
 .speck-dealership-card {
     background: var(--speck-white);

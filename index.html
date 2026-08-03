@@ -73,7 +73,7 @@ h1, h2, h3 { font-family: var(--speck-font-heading); line-height: 1.25; margin: 
 .speck-home section:nth-child(even):not(.speck-section--photo):not(.speck-brands):not(.speck-dealerships) { background: var(--speck-accent); }
 .speck-home h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: .7em; }
 .speck-home section > .speck-container > p { font-size: 1.2rem; max-width: 760px; margin: 0 auto; }
-.speck-section--photo { background-color: var(--speck-secondary); background-size: cover; background-position: right center; color: #fff; text-shadow: 0 2px 10px rgba(0,0,0,.6); }
+.speck-section--photo { background-color: var(--speck-secondary); background-size: cover; background-position: right center; color: #fff; text-shadow: 0 2px 6px rgba(0,0,0,.85), 0 4px 18px rgba(0,0,0,.7); }
 .speck-section--photo p { opacity: .92; }
 .speck-home .speck-dealerships { background: var(--speck-white); color: var(--speck-secondary); }
 
@@ -98,7 +98,8 @@ h1, h2, h3 { font-family: var(--speck-font-heading); line-height: 1.25; margin: 
 .speck-search-form select, .speck-search-form input { flex: 1 1 200px; padding: 16px 18px; border: 1px solid var(--speck-border); border-radius: var(--speck-radius); font-family: var(--speck-font-body); font-size: 1.1rem; background: var(--speck-white); color: var(--speck-secondary); }
 .speck-home .speck-search-note { font-size: .95rem; color: #666; }
 
-.speck-dealership-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px,1fr)); gap: 32px; }
+.speck-dealership-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+@media (max-width: 900px) { .speck-dealership-grid { grid-template-columns: repeat(2, 1fr); } }
 .speck-dealership-card { background: var(--speck-white); color: var(--speck-secondary); border: 1px solid var(--speck-border); border-radius: var(--speck-radius); padding: 32px; box-shadow: var(--speck-shadow); display: flex; flex-direction: column; gap: 10px; text-align: left; }
 .speck-dealership-card h3 { color: var(--speck-secondary); }
 .speck-dealership-card__brands { display:flex; justify-content:center; gap:10px; flex-wrap:wrap; width:100%; margin-bottom:6px; }
@@ -137,6 +138,7 @@ h1, h2, h3 { font-family: var(--speck-font-heading); line-height: 1.25; margin: 
     .speck-search-form select, .speck-search-form input { flex: 1 1 auto; width: 100%; }
     .speck-hero__ctas { flex-direction: column; }
     .speck-btn--block { width: 100%; }
+    .speck-dealership-grid { grid-template-columns: 1fr; }
 }
 </style>
 
@@ -320,7 +322,7 @@ h1, h2, h3 { font-family: var(--speck-font-heading); line-height: 1.25; margin: 
 		</div>
 	</section>
 
-	<section class="speck-section--photo" style="background-image: linear-gradient(180deg, rgba(0,0,0,.3), rgba(0,0,0,.3)), url('https://raw.githubusercontent.com/dawnsolomon482-cyber/speck/main/theme/assets/images/section-specials.jpg');">
+	<section class="speck-section--photo" style="background-image: linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.15)), url('https://raw.githubusercontent.com/dawnsolomon482-cyber/speck/main/theme/assets/images/section-specials.jpg');">
 		<div class="speck-container">
 			<h2>Current Specials</h2>
 			<p>New vehicle offers, used vehicle deals, and truck &amp; SUV specials across all Speck locations.</p>
@@ -328,7 +330,7 @@ h1, h2, h3 { font-family: var(--speck-font-heading); line-height: 1.25; margin: 
 		</div>
 	</section>
 
-	<section class="speck-section--photo" style="background-image: linear-gradient(180deg, rgba(0,0,0,.3), rgba(0,0,0,.3)), url('https://raw.githubusercontent.com/dawnsolomon482-cyber/speck/main/theme/assets/images/section-financing.jpg');">
+	<section class="speck-section--photo" style="background-image: linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.15)), url('https://raw.githubusercontent.com/dawnsolomon482-cyber/speck/main/theme/assets/images/section-financing.jpg');">
 		<div class="speck-container">
 			<h2>Financing Made Easy</h2>
 			<p>Get pre-qualified, value your trade-in, and explore credit resources before you visit.</p>
@@ -336,7 +338,7 @@ h1, h2, h3 { font-family: var(--speck-font-heading); line-height: 1.25; margin: 
 		</div>
 	</section>
 
-	<section class="speck-section--photo" style="background-image: linear-gradient(180deg, rgba(0,0,0,.3), rgba(0,0,0,.3)), url('https://raw.githubusercontent.com/dawnsolomon482-cyber/speck/main/theme/assets/images/section-service.jpg');">
+	<section class="speck-section--photo" style="background-image: linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.15)), url('https://raw.githubusercontent.com/dawnsolomon482-cyber/speck/main/theme/assets/images/section-service.jpg');">
 		<div class="speck-container">
 			<h2>Service &amp; Parts</h2>
 			<p>Schedule service or order parts at your nearest Speck dealership.</p>
