@@ -359,7 +359,9 @@
 .speck-section--photo {
     background-color: var(--speck-secondary);
     background-size: cover;
-    background-position: center;
+    /* Biased right so the vehicle (not the promo ad copy on the left half
+       of these banner photos) stays fully in frame instead of cropping. */
+    background-position: right center;
     color: var(--speck-white);
 }
 .speck-section--photo p {
