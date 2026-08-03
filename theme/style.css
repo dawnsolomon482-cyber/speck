@@ -1,0 +1,72 @@
+/*
+Theme Name: Speck Modern Theme
+Theme URI: https://speckdealerships.com/
+Author: Speck Family Dealerships
+Description: A modernized, Elementor-compatible WordPress theme preserving the branding, structure, and functionality of Speck Dealerships, with an improved visual design.
+Version: 1.0.0
+Requires at least: 6.0
+Requires PHP: 7.4
+Text Domain: speck-modern-theme
+*/
+
+:root {
+    /* Brand colors -- pulled directly from speckdealerships.com's own CSS
+       (--cta-background-color / --cta-hover-color / link color / --main-color). */
+    --speck-primary: #0060e3;      /* Speck CTA blue */
+    --speck-primary-hover: #0083f2; /* Speck CTA hover blue */
+    --speck-link: #003f7a;         /* Speck link blue */
+    --speck-secondary: #222222;    /* Speck body text (--main-color) */
+    --speck-accent: #f5f5f5;       /* Light gray */
+    --speck-white: #ffffff;
+    --speck-border: #e2e2e2;
+
+    --speck-font-heading: 'Poppins', Arial, sans-serif;
+    --speck-font-body: 'Inter', Arial, sans-serif;
+
+    --speck-radius: 10px;
+    --speck-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    --speck-container: 1440px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    font-family: var(--speck-font-body);
+    color: var(--speck-secondary);
+    margin: 0;
+    line-height: 1.65;
+    background: var(--speck-white);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--speck-link);
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--speck-font-heading);
+    line-height: 1.25;
+    margin: 0 0 0.5em;
+}
+
+.speck-container {
+    max-width: var(--speck-container);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.screen-reader-text {
+    position: absolute;
+    left: -9999px;
+}

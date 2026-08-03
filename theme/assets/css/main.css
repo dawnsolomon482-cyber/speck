@@ -1,0 +1,545 @@
+/* ==========================================================================
+   Speck Modern Theme - main stylesheet
+   ========================================================================== */
+
+/* Buttons */
+.speck-btn {
+    display: inline-block;
+    padding: 1.1em 2.2em;
+    border-radius: var(--speck-radius);
+    font-weight: 600;
+    font-size: 1.05rem;
+    font-family: var(--speck-font-heading);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, color 0.15s ease;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+.speck-btn--primary {
+    background: var(--speck-primary);
+    color: var(--speck-white);
+}
+.speck-btn--primary:hover {
+    background: var(--speck-primary-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--speck-shadow);
+    color: var(--speck-white);
+}
+.speck-btn--outline {
+    background: transparent;
+    color: var(--speck-primary);
+    border-color: var(--speck-primary);
+}
+.speck-btn--outline:hover {
+    background: var(--speck-primary);
+    color: var(--speck-white);
+}
+.speck-btn--outline-light {
+    color: var(--speck-white);
+    border-color: var(--speck-white);
+}
+.speck-btn--outline-light:hover {
+    background: var(--speck-white);
+    color: var(--speck-secondary);
+}
+.speck-btn--block {
+    background: var(--speck-primary);
+    color: var(--speck-white);
+    flex: 1 1 180px;
+}
+.speck-btn--block:hover {
+    background: var(--speck-primary-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--speck-shadow);
+    color: var(--speck-white);
+}
+
+/* Header: always white, regardless of site color scheme, to match Speck's brand identity */
+.speck-header {
+    border-bottom: 1px solid #e2e2e2;
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.speck-header__site-name,
+.speck-menu li a {
+    color: #1a1a1a;
+}
+.speck-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 16px 32px;
+}
+.speck-header__logo img {
+    max-height: 72px;
+    width: auto;
+}
+.speck-header__site-name {
+    font-family: var(--speck-font-heading);
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--speck-secondary);
+}
+
+.speck-menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2px;
+    margin: 0;
+    padding: 0;
+}
+.speck-menu li a {
+    display: block;
+    padding: 10px 14px;
+    font-size: 0.98rem;
+    white-space: nowrap;
+    color: var(--speck-secondary);
+    font-weight: 600;
+    border-radius: var(--speck-radius);
+}
+.speck-menu li a:hover {
+    background: var(--speck-accent);
+    color: var(--speck-primary);
+}
+
+/* Dropdown sub-menus: shown on hover/focus on desktop so every item
+   (including brand and category links) stays reachable and clickable. */
+.speck-menu li.menu-item-has-children {
+    position: relative;
+}
+.speck-menu li.menu-item-has-children > a::after {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-left: 6px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg) translateY(-2px);
+}
+.speck-menu .sub-menu {
+    list-style: none;
+    margin: 0;
+    padding: 8px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 240px;
+    background: var(--speck-white);
+    border: 1px solid var(--speck-border);
+    border-radius: var(--speck-radius);
+    box-shadow: var(--speck-shadow);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(4px);
+    transition: opacity 0.15s ease, transform 0.15s ease;
+    z-index: 200;
+}
+.speck-menu li.menu-item-has-children:hover > .sub-menu,
+.speck-menu li.menu-item-has-children:focus-within > .sub-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.speck-menu .sub-menu li a {
+    white-space: normal;
+    color: var(--speck-secondary);
+}
+
+.speck-nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    padding: 8px;
+}
+.speck-nav-toggle__bar {
+    width: 24px;
+    height: 2px;
+    background: var(--speck-secondary);
+}
+
+/* Hero */
+.speck-hero {
+    background-color: var(--speck-secondary);
+    background-size: cover;
+    background-position: center;
+    color: var(--speck-white);
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.speck-hero__inner {
+    width: 100%;
+}
+.speck-hero__inner h1 {
+    font-size: clamp(2.6rem, 6vw, 4.5rem);
+    margin-bottom: 0.4em;
+}
+.speck-hero__inner p {
+    max-width: 760px;
+    margin: 0 auto 2em;
+    font-size: 1.35rem;
+    opacity: 0.92;
+}
+.speck-hero__inner .speck-hero__count {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+.speck-search-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-bottom: 1.5em;
+}
+.speck-search-tabs__tab {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    padding: 6px 2px 10px;
+    color: var(--speck-white);
+    opacity: 0.7;
+    font-family: var(--speck-font-heading);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.speck-search-tabs__tab svg {
+    width: 18px;
+    height: 18px;
+}
+.speck-search-tabs__tab:hover {
+    opacity: 1;
+}
+.speck-search-tabs__tab.is-active {
+    opacity: 1;
+    border-bottom-color: var(--speck-white);
+}
+.speck-search-fields {
+    display: none;
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+.speck-search-fields.is-active {
+    display: flex;
+}
+.speck-hero .speck-search-form {
+    margin-top: 0.5em;
+}
+.speck-hero .speck-search-form input {
+    background: var(--speck-white);
+    color: var(--speck-secondary);
+}
+.speck-home .speck-hero .speck-search-note {
+    color: var(--speck-white);
+    opacity: 0.75;
+}
+.speck-hero__ctas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 2em;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Explore By Automotive Brand: dark, slow-motion auto-scrolling logo marquee */
+.speck-home .speck-brands {
+    background: #000000;
+    color: var(--speck-white);
+    padding: 80px 0;
+}
+.speck-brands h2 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+.speck-brands__marquee {
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.speck-brands__track {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: max-content;
+    animation: speck-brands-scroll 50s linear infinite;
+}
+.speck-brands__logo {
+    position: relative;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    padding: 0 16px;
+    transition: transform 0.2s ease;
+}
+.speck-brands__logo::before {
+    content: '';
+    position: absolute;
+    inset: 0 20px;
+    /* A soft ambient glow (not a hard-edged box) so darker logo marks
+       (Nissan, Jeep, Dodge, etc.) still read against the dark section. */
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 72%);
+    z-index: -1;
+}
+.speck-brands__logo:hover {
+    transform: scale(1.1);
+}
+.speck-brands__logo img {
+    max-height: 90px;
+    width: auto;
+}
+@keyframes speck-brands-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+.speck-brands__marquee:hover .speck-brands__track {
+    animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+    .speck-brands__track {
+        animation: none;
+    }
+}
+@media (max-width: 600px) {
+    .speck-brands__logo {
+        width: 150px;
+    }
+    .speck-brands__logo img {
+        max-height: 60px;
+    }
+}
+
+/* Sections */
+.speck-home section {
+    padding: 110px 0;
+    text-align: center;
+}
+.speck-home section:nth-child(even):not(.speck-section--photo):not(.speck-brands):not(.speck-dealerships) {
+    background: var(--speck-accent);
+}
+.speck-home .speck-dealerships {
+    background: var(--speck-secondary);
+    color: var(--speck-white);
+}
+.speck-home h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 0.7em;
+}
+.speck-home section > .speck-container > p {
+    font-size: 1.2rem;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Sections with a Speck vehicle-photo background (Specials, Financing, Service, About) */
+.speck-section--photo {
+    background-color: var(--speck-secondary);
+    background-size: cover;
+    background-position: center;
+    color: var(--speck-white);
+}
+.speck-section--photo p {
+    opacity: 0.92;
+}
+
+/* Inventory search */
+.speck-search-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin: 0 auto 20px;
+    max-width: 900px;
+}
+.speck-search-form select,
+.speck-search-form input {
+    flex: 1 1 200px;
+    padding: 16px 18px;
+    border: 1px solid var(--speck-border);
+    border-radius: var(--speck-radius);
+    font-family: var(--speck-font-body);
+    font-size: 1.1rem;
+}
+.speck-home .speck-search-note {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* Dealership cards */
+.speck-dealership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+}
+.speck-dealership-card {
+    background: var(--speck-white);
+    color: var(--speck-secondary);
+    border: 1px solid var(--speck-border);
+    border-radius: var(--speck-radius);
+    padding: 32px;
+    box-shadow: var(--speck-shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
+.speck-dealership-card__brands {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+}
+.speck-dealership-card__brands img {
+    height: 40px;
+    width: auto;
+}
+.speck-dealership-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0;
+}
+.speck-dealership-card__address,
+.speck-dealership-card__phone {
+    margin: 0;
+    font-size: 1.05rem;
+    color: #555;
+}
+.speck-dealership-card .speck-btn {
+    margin-top: 14px;
+    align-self: flex-start;
+}
+
+/* Footer: a solid brand-color social bar, then a thin white credit line
+   (no dark panel) so the footer always matches the rest of the site's
+   fixed white/red branding. */
+.speck-footer__social {
+    background: var(--speck-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    padding: 22px 0;
+}
+.speck-footer__social a {
+    color: var(--speck-white);
+    display: flex;
+}
+.speck-footer__social svg {
+    width: 26px;
+    height: 26px;
+}
+.speck-footer__bottom {
+    background: var(--speck-white);
+    border-top: 1px solid var(--speck-border);
+    padding: 12px 0;
+}
+.speck-footer__bottom-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    color: #444;
+}
+.speck-footer__bottom-inner a {
+    color: var(--speck-primary);
+}
+.speck-footer__bottom-inner span[aria-hidden] {
+    opacity: 0.4;
+}
+
+/* Full width Elementor template */
+.speck-page--fullwidth {
+    max-width: none;
+    padding: 0;
+}
+
+/* Responsive: switch to the hamburger menu once the 8 nav items no
+   longer fit comfortably next to the logo (tablet and below). */
+@media (max-width: 1024px) {
+    .speck-nav-toggle {
+        display: flex;
+    }
+    .speck-primary-nav {
+        display: none;
+        width: 100%;
+        order: 3;
+    }
+    .speck-primary-nav.is-open {
+        display: block;
+    }
+    .speck-menu {
+        flex-direction: column;
+        align-items: stretch;
+        border-top: 1px solid var(--speck-border);
+        padding-top: 8px;
+    }
+    .speck-menu li a {
+        padding: 14px 8px;
+    }
+    /* On touch/mobile there is no hover, so sub-menus are always shown,
+       stacked and indented under their parent -- every link stays
+       reachable and clickable, nothing hidden behind a hover state. */
+    .speck-menu .sub-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border: 0;
+        border-left: 2px solid var(--speck-border);
+        border-radius: 0;
+        margin: 0 0 4px 16px;
+        padding: 0;
+    }
+    .speck-menu li.menu-item-has-children > a::after {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .speck-hero {
+        min-height: 70vh;
+    }
+    .speck-home section {
+        padding: 64px 0;
+    }
+    .speck-search-form {
+        flex-direction: column;
+    }
+    .speck-search-form select,
+    .speck-search-form input {
+        flex: 1 1 auto;
+        width: 100%;
+    }
+    .speck-hero__ctas {
+        flex-direction: column;
+    }
+    .speck-btn--block {
+        width: 100%;
+    }
+}
