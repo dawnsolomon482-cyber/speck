@@ -106,6 +106,9 @@
     background: var(--speck-accent);
     color: var(--speck-primary);
 }
+.speck-menu .sub-menu li a:hover {
+    background: var(--speck-white);
+}
 
 /* Dropdown sub-menus: shown on hover/focus on desktop so every item
    (including brand and category links) stays reachable and clickable. */

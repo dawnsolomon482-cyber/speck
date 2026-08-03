@@ -44,6 +44,7 @@ h1, h2, h3 { font-family: var(--speck-font-heading); line-height: 1.25; margin: 
 .speck-menu { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 2px; margin: 0; padding: 0; }
 .speck-menu li a { display: block; padding: 10px 14px; font-size: .98rem; white-space: nowrap; font-weight: 600; border-radius: var(--speck-radius); }
 .speck-menu li a:hover { background: var(--speck-accent); color: var(--speck-primary); }
+.speck-menu .sub-menu li a:hover { background: var(--speck-white); }
 .speck-menu li.menu-item-has-children { position: relative; }
 .speck-menu li.menu-item-has-children > a::after { content: ''; display: inline-block; width: 6px; height: 6px; margin-left: 6px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg) translateY(-2px); }
 .speck-menu .sub-menu { list-style: none; margin: 0; padding: 8px; position: absolute; top: 100%; left: 0; min-width: 240px; background: #fff; border: 1px solid var(--speck-border); border-radius: var(--speck-radius); box-shadow: var(--speck-shadow); opacity: 0; visibility: hidden; transform: translateY(4px); transition: opacity .15s, transform .15s; z-index: 200; }
