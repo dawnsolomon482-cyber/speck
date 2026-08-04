@@ -47,9 +47,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 			<button type="submit" class="speck-btn speck-btn--primary"><?php esc_html_e( 'Search', 'speck-modern-theme' ); ?></button>
 		</form>
-		<p class="speck-search-note">
-			<?php esc_html_e( 'Search results are provided by each dealership\'s own inventory system. Selecting a dealership below will take you to their live inventory.', 'speck-modern-theme' ); ?>
-		</p>
 
 		<div class="speck-hero__ctas">
 			<a class="speck-btn speck-btn--block" href="#our-dealerships"><?php esc_html_e( 'Locations', 'speck-modern-theme' ); ?></a>
