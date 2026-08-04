@@ -7,7 +7,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<section class="speck-financing speck-section--photo" style="background-image: url('<?php echo esc_url( speck_background_image( 'speck_financing_bg', 'section-financing.jpg' ) ); ?>');">
+<section class="speck-financing speck-section--photo">
+	<img class="speck-section--photo__img" src="<?php echo esc_url( speck_background_image( 'speck_financing_bg', 'section-financing.jpg' ) ); ?>" alt="" />
 	<div class="speck-container">
 		<h2><?php esc_html_e( 'Financing Made Easy', 'speck-modern-theme' ); ?></h2>
 		<p><?php esc_html_e( 'Get pre-qualified, value your trade-in, and explore credit resources before you visit.', 'speck-modern-theme' ); ?></p>

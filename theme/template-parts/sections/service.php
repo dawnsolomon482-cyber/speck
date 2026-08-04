@@ -7,7 +7,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<section class="speck-service speck-section--photo" style="background-image: url('<?php echo esc_url( speck_background_image( 'speck_service_bg', 'section-service.jpg' ) ); ?>');">
+<section class="speck-service speck-section--photo">
+	<img class="speck-section--photo__img" src="<?php echo esc_url( speck_background_image( 'speck_service_bg', 'section-service.jpg' ) ); ?>" alt="" />
 	<div class="speck-container">
 		<h2><?php esc_html_e( 'Service & Parts', 'speck-modern-theme' ); ?></h2>
 		<p><?php esc_html_e( 'Schedule service or order parts at your nearest Speck dealership.', 'speck-modern-theme' ); ?></p>
