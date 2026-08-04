@@ -94,6 +94,59 @@ function speck_customize_register( $wp_customize ) {
 			)
 		);
 	}
+	/**
+	 * Footer links: social profiles and the two bottom-bar links, editable
+	 * from WP Admin > Appearance > Customize > Speck Footer Links, instead
+	 * of editing theme files.
+	 */
+	$wp_customize->add_section(
+		'speck_footer_links',
+		array(
+			'title'    => __( 'Speck Footer Links', 'speck-modern-theme' ),
+			'priority' => 31,
+		)
+	);
+
+	$footer_links = array(
+		'speck_facebook_url' => array(
+			'label'   => __( 'Facebook URL', 'speck-modern-theme' ),
+			'default' => '',
+		),
+		'speck_youtube_url' => array(
+			'label'   => __( 'YouTube URL', 'speck-modern-theme' ),
+			'default' => '',
+		),
+		'speck_instagram_url' => array(
+			'label'   => __( 'Instagram URL', 'speck-modern-theme' ),
+			'default' => '',
+		),
+		'speck_sitemap_url' => array(
+			'label'   => __( 'Sitemap Link', 'speck-modern-theme' ),
+			'default' => 'https://www.speckdealerships.com/sitemap.aspx',
+		),
+		'speck_privacy_url' => array(
+			'label'   => __( 'Privacy Policy Link', 'speck-modern-theme' ),
+			'default' => '',
+		),
+	);
+
+	foreach ( $footer_links as $setting => $args ) {
+		$wp_customize->add_setting(
+			$setting,
+			array(
+				'default'           => $args['default'],
+				'sanitize_callback' => 'esc_url_raw',
+			)
+		);
+		$wp_customize->add_control(
+			$setting,
+			array(
+				'label'   => $args['label'],
+				'section' => 'speck_footer_links',
+				'type'    => 'url',
+			)
+		);
+	}
 }
 add_action( 'customize_register', 'speck_customize_register' );
 
@@ -107,6 +160,18 @@ function speck_background_image( $setting, $fallback_filename ) {
 		return $custom;
 	}
 	return get_template_directory_uri() . '/assets/images/' . $fallback_filename;
+}
+
+/**
+ * Returns a Customizer-managed footer link, falling back to the given
+ * default URL when nothing has been entered yet in the Customizer.
+ */
+function speck_footer_link( $setting, $fallback_url = '#' ) {
+	$custom = get_theme_mod( $setting, '' );
+	if ( ! empty( $custom ) ) {
+		return $custom;
+	}
+	return $fallback_url;
 }
 
 /**
