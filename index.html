@@ -241,36 +241,6 @@ h1, h2, h3 { font-family: var(--speck-font-heading); line-height: 1.25; margin: 
 			<h1>Shop By Vehicle</h1>
 			<p class="speck-hero__count">Vehicles available across every Speck dealership</p>
 
-			<div class="speck-search-tabs" role="tablist">
-				<button type="button" class="speck-search-tabs__tab" role="tab" data-speck-tab="vehicle" aria-selected="false">
-					<svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h10M4 17h13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="17" cy="7" r="2" fill="currentColor"/><circle cx="12" cy="17" r="2" fill="currentColor"/></svg>
-					Vehicle
-				</button>
-				<button type="button" class="speck-search-tabs__tab is-active" role="tab" data-speck-tab="keyword" aria-selected="true">
-					<svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-					Keyword
-				</button>
-				<button type="button" class="speck-search-tabs__tab" role="tab" data-speck-tab="budget" aria-selected="false">
-					<svg viewBox="0 0 24 24" fill="none"><rect x="2" y="6" width="16" height="12" rx="2" stroke="currentColor" stroke-width="2"/><circle cx="10" cy="12" r="2.5" stroke="currentColor" stroke-width="2"/><path d="M18 9v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-					Budget
-				</button>
-			</div>
-
-			<form class="speck-search-form">
-				<div class="speck-search-fields" data-speck-fields="vehicle">
-					<select><option>All Vehicles</option><option>New</option><option>Used</option><option>Certified Pre-Owned</option></select>
-					<input type="text" placeholder="Make">
-					<input type="text" placeholder="Model">
-				</div>
-				<div class="speck-search-fields is-active" data-speck-fields="keyword">
-					<input type="text" placeholder="Search by Make, Stock #, etc.">
-				</div>
-				<div class="speck-search-fields" data-speck-fields="budget">
-					<input type="number" placeholder="Min Price">
-					<input type="number" placeholder="Max Price">
-				</div>
-				<button type="button" class="speck-btn speck-btn--primary">Search</button>
-			</form>
 			<div class="speck-hero__ctas">
 				<a class="speck-btn speck-btn--block" href="#our-dealerships">Locations</a>
 				<a class="speck-btn speck-btn--block" href="#">New Specials</a>
