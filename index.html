@@ -76,6 +76,7 @@ h1, h2, h3 { font-family: var(--speck-font-heading); line-height: 1.25; margin: 
 .speck-home .speck-section--photo { position: relative; overflow: hidden; color: #fff; text-shadow: 0 2px 6px rgba(0,0,0,.85), 0 4px 18px rgba(0,0,0,.7); padding: 0; }
 .speck-section--photo__img { display: block; width: 100%; height: auto; }
 .speck-section--photo > .speck-container { position: absolute; inset: 0; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.speck-section--photo__panel { background: rgba(0,0,0,.55); border-radius: var(--speck-radius); padding: 28px 36px; max-width: 640px; }
 .speck-section--photo p { opacity: .92; }
 .speck-home .speck-dealerships { background: var(--speck-white); color: var(--speck-secondary); }
 
@@ -327,29 +328,35 @@ h1, h2, h3 { font-family: var(--speck-font-heading); line-height: 1.25; margin: 
 	<section class="speck-section--photo">
 		<img class="speck-section--photo__img" src="https://raw.githubusercontent.com/dawnsolomon482-cyber/speck/main/theme/assets/images/section-specials.jpg" alt="">
 		<div class="speck-container">
-			<h2>Current Specials</h2>
-			<p>New vehicle offers, used vehicle deals, and truck &amp; SUV specials across all Speck locations.</p>
-			<a class="speck-btn speck-btn--primary" href="#">See All Specials</a>
+			<div class="speck-section--photo__panel">
+				<h2>Current Specials</h2>
+				<p>New vehicle offers, used vehicle deals, and truck &amp; SUV specials across all Speck locations.</p>
+				<a class="speck-btn speck-btn--primary" href="#">See All Specials</a>
+			</div>
 		</div>
 	</section>
 
 	<section class="speck-section--photo">
 		<img class="speck-section--photo__img" src="https://raw.githubusercontent.com/dawnsolomon482-cyber/speck/main/theme/assets/images/section-financing.jpg" alt="">
 		<div class="speck-container">
-			<h2>Financing Made Easy</h2>
-			<p>Get pre-qualified, value your trade-in, and explore credit resources before you visit.</p>
-			<a class="speck-btn speck-btn--primary" href="#">Explore Financing</a>
+			<div class="speck-section--photo__panel">
+				<h2>Financing Made Easy</h2>
+				<p>Get pre-qualified, value your trade-in, and explore credit resources before you visit.</p>
+				<a class="speck-btn speck-btn--primary" href="#">Explore Financing</a>
+			</div>
 		</div>
 	</section>
 
 	<section class="speck-section--photo">
 		<img class="speck-section--photo__img" src="https://raw.githubusercontent.com/dawnsolomon482-cyber/speck/main/theme/assets/images/section-service.jpg" alt="">
 		<div class="speck-container">
-			<h2>Service &amp; Parts</h2>
-			<p>Schedule service or order parts at your nearest Speck dealership.</p>
-			<div class="speck-hero__ctas">
-				<a class="speck-btn speck-btn--primary" href="https://www.speckdealerships.com/service">Schedule Service</a>
-				<a class="speck-btn speck-btn--outline-light" href="#">Order Parts</a>
+			<div class="speck-section--photo__panel">
+				<h2>Service &amp; Parts</h2>
+				<p>Schedule service or order parts at your nearest Speck dealership.</p>
+				<div class="speck-hero__ctas">
+					<a class="speck-btn speck-btn--primary" href="https://www.speckdealerships.com/service">Schedule Service</a>
+					<a class="speck-btn speck-btn--outline-light" href="#">Order Parts</a>
+				</div>
 			</div>
 		</div>
 	</section>

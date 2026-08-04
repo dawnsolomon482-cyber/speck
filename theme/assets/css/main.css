@@ -384,6 +384,14 @@
     align-items: center;
     justify-content: center;
 }
+/* Darken only the text area (not the whole photo) so the CTA copy stays
+   readable while the ad graphic itself is left bright and fully visible. */
+.speck-section--photo__panel {
+    background: rgba(0, 0, 0, 0.55);
+    border-radius: var(--speck-radius);
+    padding: 28px 36px;
+    max-width: 640px;
+}
 .speck-section--photo p {
     opacity: 0.92;
 }
