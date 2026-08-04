@@ -384,13 +384,19 @@
     align-items: center;
     justify-content: center;
 }
-/* Darken only the text area (not the whole photo) so the CTA copy stays
-   readable while the ad graphic itself is left bright and fully visible. */
+/* Darken only right behind the words themselves (not a box around them and
+   not the whole photo), so the ad graphic stays fully bright and visible. */
 .speck-section--photo__panel {
-    background: rgba(0, 0, 0, 0.55);
-    border-radius: var(--speck-radius);
-    padding: 28px 36px;
     max-width: 640px;
+}
+.speck-section--photo__panel h2,
+.speck-section--photo__panel p {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.55);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
 }
 .speck-section--photo p {
     opacity: 0.92;
