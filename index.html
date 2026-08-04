@@ -73,8 +73,11 @@ h1, h2, h3 { font-family: var(--speck-font-heading); line-height: 1.25; margin: 
 .speck-home section:nth-child(even):not(.speck-section--photo):not(.speck-brands):not(.speck-dealerships) { background: var(--speck-accent); }
 .speck-home h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: .7em; }
 .speck-home section > .speck-container > p { font-size: 1.2rem; max-width: 760px; margin: 0 auto; }
-.speck-home .speck-section--photo { padding: 0; }
+.speck-home .speck-section--photo { position: relative; overflow: hidden; color: #fff; text-shadow: 0 2px 6px rgba(0,0,0,.85), 0 4px 18px rgba(0,0,0,.7); padding: 0; }
 .speck-section--photo__img { display: block; width: 100%; height: auto; }
+.speck-section--photo > .speck-container { position: absolute; inset: 0; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.speck-section--photo__panel { max-width: 640px; }
+.speck-section--photo p { opacity: .92; }
 .speck-home .speck-dealerships { background: var(--speck-white); color: var(--speck-secondary); }
 
 /* Explore By Automotive Brand: dark coverflow-style carousel */
@@ -323,15 +326,39 @@ h1, h2, h3 { font-family: var(--speck-font-heading); line-height: 1.25; margin: 
 	</section>
 
 	<section class="speck-section--photo">
-		<img class="speck-section--photo__img" src="https://raw.githubusercontent.com/dawnsolomon482-cyber/speck/main/theme/assets/images/section-specials.jpg" alt="Current Specials">
+		<img class="speck-section--photo__img" src="https://raw.githubusercontent.com/dawnsolomon482-cyber/speck/main/theme/assets/images/section-specials.jpg" alt="">
+		<div class="speck-container">
+			<div class="speck-section--photo__panel">
+				<h2>Current Specials</h2>
+				<p>New vehicle offers, used vehicle deals, and truck &amp; SUV specials across all Speck locations.</p>
+				<a class="speck-btn speck-btn--primary" href="#">See All Specials</a>
+			</div>
+		</div>
 	</section>
 
 	<section class="speck-section--photo">
-		<img class="speck-section--photo__img" src="https://raw.githubusercontent.com/dawnsolomon482-cyber/speck/main/theme/assets/images/section-financing.jpg" alt="Financing Made Easy">
+		<img class="speck-section--photo__img" src="https://raw.githubusercontent.com/dawnsolomon482-cyber/speck/main/theme/assets/images/section-financing.jpg" alt="">
+		<div class="speck-container">
+			<div class="speck-section--photo__panel">
+				<h2>Financing Made Easy</h2>
+				<p>Get pre-qualified, value your trade-in, and explore credit resources before you visit.</p>
+				<a class="speck-btn speck-btn--primary" href="#">Explore Financing</a>
+			</div>
+		</div>
 	</section>
 
 	<section class="speck-section--photo">
-		<img class="speck-section--photo__img" src="https://raw.githubusercontent.com/dawnsolomon482-cyber/speck/main/theme/assets/images/section-service.jpg" alt="Service &amp; Parts">
+		<img class="speck-section--photo__img" src="https://raw.githubusercontent.com/dawnsolomon482-cyber/speck/main/theme/assets/images/section-service.jpg" alt="">
+		<div class="speck-container">
+			<div class="speck-section--photo__panel">
+				<h2>Service &amp; Parts</h2>
+				<p>Schedule service or order parts at your nearest Speck dealership.</p>
+				<div class="speck-hero__ctas">
+					<a class="speck-btn speck-btn--primary" href="https://www.speckdealerships.com/service">Schedule Service</a>
+					<a class="speck-btn speck-btn--outline-light" href="#">Order Parts</a>
+				</div>
+			</div>
+		</div>
 	</section>
 
 	<section class="speck-about">
