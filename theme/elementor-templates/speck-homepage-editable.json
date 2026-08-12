@@ -1,0 +1,330 @@
+{
+  "content": [
+    {
+      "id": "sechero1",
+      "elType": "section",
+      "settings": { "background_background": "classic", "background_color": "#222222" },
+      "elements": [
+        {
+          "id": "herocol1",
+          "elType": "column",
+          "settings": { "_column_size": 100 },
+          "elements": [
+            {
+              "id": "heroshortcode1",
+              "elType": "widget",
+              "widgetType": "shortcode",
+              "settings": { "shortcode": "[speck_hero]" }
+            }
+          ]
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "secbrand1",
+      "elType": "section",
+      "settings": { "background_background": "classic", "background_color": "#000000" },
+      "elements": [
+        {
+          "id": "brandcol1",
+          "elType": "column",
+          "settings": { "_column_size": 100 },
+          "elements": [
+            {
+              "id": "brandshortcode1",
+              "elType": "widget",
+              "widgetType": "shortcode",
+              "settings": { "shortcode": "[speck_brands]" }
+            }
+          ]
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "secdealer1",
+      "elType": "section",
+      "settings": { "background_background": "classic", "background_color": "#FFFFFF" },
+      "elements": [
+        {
+          "id": "dealercol1",
+          "elType": "column",
+          "settings": { "_column_size": 100 },
+          "elements": [
+            {
+              "id": "dealershortcode1",
+              "elType": "widget",
+              "widgetType": "shortcode",
+              "settings": { "shortcode": "[speck_dealerships]" }
+            }
+          ]
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "secspecials1",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_image": { "url": "https://raw.githubusercontent.com/dawnsolomon482-cyber/speck/main/theme/assets/images/section-specials.jpg", "id": "" },
+        "background_position": "center center",
+        "background_size": "contain",
+        "background_repeat": "no-repeat",
+        "background_color": "#222222",
+        "min_height": { "unit": "px", "size": 480, "sizes": [] },
+        "content_position": "middle",
+        "text_align": "center"
+      },
+      "elements": [
+        {
+          "id": "specialscol1",
+          "elType": "column",
+          "settings": { "_column_size": 100 },
+          "elements": [
+            {
+              "id": "specialsheading1",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Current Specials",
+                "align": "center",
+                "title_color": "#FFFFFF",
+                "typography_typography": "custom",
+                "typography_font_family": "Poppins",
+                "typography_font_weight": "700",
+                "text_shadow_text_shadow_type": "yes",
+                "text_shadow_text_shadow": { "horizontal": 0, "vertical": 2, "blur": 6, "color": "rgba(0,0,0,0.85)" }
+              }
+            },
+            {
+              "id": "specialstext1",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style=\"color:#fff;text-shadow:0 2px 6px rgba(0,0,0,.85);\">New vehicle offers, used vehicle deals, and truck &amp; SUV specials across all Speck locations.</p>",
+                "align": "center"
+              }
+            },
+            {
+              "id": "specialsbtn1",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "See All Specials",
+                "align": "center",
+                "link": { "url": "/specials/", "is_external": "", "nofollow": "" },
+                "background_color": "#6b7280",
+                "button_text_color": "#FFFFFF",
+                "border_radius": { "unit": "px", "top": "10", "right": "10", "bottom": "10", "left": "10", "isLinked": true }
+              }
+            }
+          ]
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "secfinancing1",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_image": { "url": "https://raw.githubusercontent.com/dawnsolomon482-cyber/speck/main/theme/assets/images/section-financing.jpg", "id": "" },
+        "background_position": "center center",
+        "background_size": "contain",
+        "background_repeat": "no-repeat",
+        "background_color": "#222222",
+        "min_height": { "unit": "px", "size": 480, "sizes": [] },
+        "content_position": "middle",
+        "text_align": "center"
+      },
+      "elements": [
+        {
+          "id": "financingcol1",
+          "elType": "column",
+          "settings": { "_column_size": 100 },
+          "elements": [
+            {
+              "id": "financingheading1",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Financing Made Easy",
+                "align": "center",
+                "title_color": "#FFFFFF",
+                "typography_typography": "custom",
+                "typography_font_family": "Poppins",
+                "typography_font_weight": "700",
+                "text_shadow_text_shadow_type": "yes",
+                "text_shadow_text_shadow": { "horizontal": 0, "vertical": 2, "blur": 6, "color": "rgba(0,0,0,0.85)" }
+              }
+            },
+            {
+              "id": "financingtext1",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style=\"color:#fff;text-shadow:0 2px 6px rgba(0,0,0,.85);\">Get pre-qualified, value your trade-in, and explore credit resources before you visit.</p>",
+                "align": "center"
+              }
+            },
+            {
+              "id": "financingbtn1",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "Explore Financing",
+                "align": "center",
+                "link": { "url": "/finance/", "is_external": "", "nofollow": "" },
+                "background_color": "#6b7280",
+                "button_text_color": "#FFFFFF",
+                "border_radius": { "unit": "px", "top": "10", "right": "10", "bottom": "10", "left": "10", "isLinked": true }
+              }
+            }
+          ]
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "secservice1",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_image": { "url": "https://raw.githubusercontent.com/dawnsolomon482-cyber/speck/main/theme/assets/images/section-service.jpg", "id": "" },
+        "background_position": "center center",
+        "background_size": "contain",
+        "background_repeat": "no-repeat",
+        "background_color": "#222222",
+        "min_height": { "unit": "px", "size": 480, "sizes": [] },
+        "content_position": "middle",
+        "text_align": "center"
+      },
+      "elements": [
+        {
+          "id": "servicecol1",
+          "elType": "column",
+          "settings": { "_column_size": 100 },
+          "elements": [
+            {
+              "id": "serviceheading1",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Service & Parts",
+                "align": "center",
+                "title_color": "#FFFFFF",
+                "typography_typography": "custom",
+                "typography_font_family": "Poppins",
+                "typography_font_weight": "700",
+                "text_shadow_text_shadow_type": "yes",
+                "text_shadow_text_shadow": { "horizontal": 0, "vertical": 2, "blur": 6, "color": "rgba(0,0,0,0.85)" }
+              }
+            },
+            {
+              "id": "servicetext1",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style=\"color:#fff;text-shadow:0 2px 6px rgba(0,0,0,.85);\">Schedule service or order parts at your nearest Speck dealership.</p>",
+                "align": "center"
+              }
+            },
+            {
+              "id": "servicebtns1",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "Schedule Service",
+                "align": "center",
+                "link": { "url": "https://www.speckdealerships.com/service", "is_external": "yes", "nofollow": "" },
+                "background_color": "#6b7280",
+                "button_text_color": "#FFFFFF",
+                "border_radius": { "unit": "px", "top": "10", "right": "10", "bottom": "10", "left": "10", "isLinked": true }
+              }
+            },
+            {
+              "id": "servicebtns2",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "Order Parts",
+                "align": "center",
+                "link": { "url": "/parts/", "is_external": "", "nofollow": "" },
+                "background_color": "transparent",
+                "button_text_color": "#FFFFFF",
+                "border_border": "solid",
+                "border_width": { "unit": "px", "top": "2", "right": "2", "bottom": "2", "left": "2", "isLinked": true },
+                "border_color": "#FFFFFF",
+                "border_radius": { "unit": "px", "top": "10", "right": "10", "bottom": "10", "left": "10", "isLinked": true }
+              }
+            }
+          ]
+        }
+      ],
+      "isInner": false
+    },
+    {
+      "id": "secabout1",
+      "elType": "section",
+      "settings": {
+        "background_background": "classic",
+        "background_color": "#f5f5f5",
+        "padding": { "unit": "px", "top": "110", "bottom": "110", "isLinked": false },
+        "text_align": "center"
+      },
+      "elements": [
+        {
+          "id": "aboutcol1",
+          "elType": "column",
+          "settings": { "_column_size": 100 },
+          "elements": [
+            {
+              "id": "aboutheading1",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "About Speck Family Dealerships",
+                "align": "center",
+                "title_color": "#222222",
+                "typography_typography": "custom",
+                "typography_font_family": "Poppins"
+              }
+            },
+            {
+              "id": "abouttext1",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p>Speck Family Dealerships offers a solid selection of new cars, trucks, and SUVs, plus quality pre-owned inventory, finance expertise, and a professional team of service technicians across Washington State.</p>",
+                "align": "center"
+              }
+            },
+            {
+              "id": "aboutbtn1",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "Learn More",
+                "align": "center",
+                "link": { "url": "#", "is_external": "", "nofollow": "" },
+                "background_color": "transparent",
+                "button_text_color": "#6b7280",
+                "border_border": "solid",
+                "border_width": { "unit": "px", "top": "2", "right": "2", "bottom": "2", "left": "2", "isLinked": true },
+                "border_color": "#6b7280",
+                "border_radius": { "unit": "px", "top": "10", "right": "10", "bottom": "10", "left": "10", "isLinked": true }
+              }
+            }
+          ]
+        }
+      ],
+      "isInner": false
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Speck Homepage (Elementor Editable)",
+  "type": "page"
+}
