@@ -199,58 +199,6 @@
     font-weight: 700;
     font-size: 1.05rem;
 }
-.speck-search-tabs {
-    display: flex;
-    justify-content: center;
-    gap: 28px;
-    margin-bottom: 1.5em;
-}
-.speck-search-tabs__tab {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: none;
-    border: 0;
-    border-bottom: 2px solid transparent;
-    padding: 6px 2px 10px;
-    color: var(--speck-white);
-    opacity: 0.7;
-    font-family: var(--speck-font-heading);
-    font-weight: 600;
-    font-size: 1rem;
-    cursor: pointer;
-}
-.speck-search-tabs__tab svg {
-    width: 18px;
-    height: 18px;
-}
-.speck-search-tabs__tab:hover {
-    opacity: 1;
-}
-.speck-search-tabs__tab.is-active {
-    opacity: 1;
-    border-bottom-color: var(--speck-white);
-}
-.speck-search-fields {
-    display: none;
-    flex: 1 1 100%;
-    flex-wrap: wrap;
-    gap: 16px;
-}
-.speck-search-fields.is-active {
-    display: flex;
-}
-.speck-hero .speck-search-form {
-    margin-top: 0.5em;
-}
-.speck-hero .speck-search-form input {
-    background: var(--speck-white);
-    color: var(--speck-secondary);
-}
-.speck-home .speck-hero .speck-search-note {
-    color: var(--speck-white);
-    opacity: 0.75;
-}
 .speck-hero__ctas {
     display: flex;
     flex-wrap: wrap;
@@ -389,29 +337,6 @@
 }
 .speck-section--photo p {
     opacity: 0.92;
-}
-
-/* Inventory search */
-.speck-search-form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px;
-    margin: 0 auto 20px;
-    max-width: 900px;
-}
-.speck-search-form select,
-.speck-search-form input {
-    flex: 1 1 200px;
-    padding: 16px 18px;
-    border: 1px solid var(--speck-border);
-    border-radius: var(--speck-radius);
-    font-family: var(--speck-font-body);
-    font-size: 1.1rem;
-}
-.speck-home .speck-search-note {
-    font-size: 0.95rem;
-    color: #666;
 }
 
 /* Dealership cards */
@@ -580,14 +505,6 @@
     }
     .speck-home section {
         padding: 64px 0;
-    }
-    .speck-search-form {
-        flex-direction: column;
-    }
-    .speck-search-form select,
-    .speck-search-form input {
-        flex: 1 1 auto;
-        width: 100%;
     }
     .speck-hero__ctas {
         flex-direction: column;
