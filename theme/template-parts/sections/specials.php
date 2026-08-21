@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="speck-section--photo__panel">
 			<h2><?php esc_html_e( 'Current Specials', 'speck-modern-theme' ); ?></h2>
 			<p><?php esc_html_e( 'New vehicle offers, used vehicle deals, and truck & SUV specials across all Speck locations.', 'speck-modern-theme' ); ?></p>
-			<a class="speck-btn speck-btn--primary" href="<?php echo esc_url( home_url( '/specials/' ) ); ?>">
+			<a class="speck-btn speck-btn--primary" href="<?php echo esc_url( speck_footer_link( 'speck_specials_button_url', home_url( '/specials/' ) ) ); ?>">
 				<?php esc_html_e( 'See All Specials', 'speck-modern-theme' ); ?>
 			</a>
 		</div>

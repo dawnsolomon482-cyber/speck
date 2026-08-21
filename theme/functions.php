@@ -147,6 +147,72 @@ function speck_customize_register( $wp_customize ) {
 			)
 		);
 	}
+
+	/**
+	 * Button links: every CTA button across the homepage sections, editable
+	 * from WP Admin > Appearance > Customize > Speck Button Links, instead
+	 * of editing theme files.
+	 */
+	$wp_customize->add_section(
+		'speck_button_links',
+		array(
+			'title'    => __( 'Speck Button Links', 'speck-modern-theme' ),
+			'priority' => 32,
+		)
+	);
+
+	$button_links = array(
+		'speck_hero_locations_url' => array(
+			'label'   => __( 'Hero: "Locations" button', 'speck-modern-theme' ),
+			'default' => '#our-dealerships',
+		),
+		'speck_hero_specials_url' => array(
+			'label'   => __( 'Hero: "New Specials" button', 'speck-modern-theme' ),
+			'default' => home_url( '/specials/' ),
+		),
+		'speck_hero_service_url' => array(
+			'label'   => __( 'Hero: "Service" button', 'speck-modern-theme' ),
+			'default' => 'https://www.speckdealerships.com/service',
+		),
+		'speck_specials_button_url' => array(
+			'label'   => __( 'Specials section: "See All Specials" button', 'speck-modern-theme' ),
+			'default' => home_url( '/specials/' ),
+		),
+		'speck_financing_button_url' => array(
+			'label'   => __( 'Financing section: "Explore Financing" button', 'speck-modern-theme' ),
+			'default' => home_url( '/finance/' ),
+		),
+		'speck_service_schedule_url' => array(
+			'label'   => __( 'Service section: "Schedule Service" button', 'speck-modern-theme' ),
+			'default' => 'https://www.speckdealerships.com/service',
+		),
+		'speck_service_parts_url' => array(
+			'label'   => __( 'Service section: "Order Parts" button', 'speck-modern-theme' ),
+			'default' => home_url( '/parts/' ),
+		),
+		'speck_about_button_url' => array(
+			'label'   => __( 'About section: "Learn More" button', 'speck-modern-theme' ),
+			'default' => home_url( '/about-us/' ),
+		),
+	);
+
+	foreach ( $button_links as $setting => $args ) {
+		$wp_customize->add_setting(
+			$setting,
+			array(
+				'default'           => $args['default'],
+				'sanitize_callback' => 'esc_url_raw',
+			)
+		);
+		$wp_customize->add_control(
+			$setting,
+			array(
+				'label'   => $args['label'],
+				'section' => 'speck_button_links',
+				'type'    => 'url',
+			)
+		);
+	}
 }
 add_action( 'customize_register', 'speck_customize_register' );
 

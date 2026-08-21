@@ -13,9 +13,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<p class="speck-hero__count"><?php esc_html_e( 'Vehicles available across every Speck dealership', 'speck-modern-theme' ); ?></p>
 
 		<div class="speck-hero__ctas">
-			<a class="speck-btn speck-btn--block" href="#our-dealerships"><?php esc_html_e( 'Locations', 'speck-modern-theme' ); ?></a>
-			<a class="speck-btn speck-btn--block" href="<?php echo esc_url( home_url( '/specials/' ) ); ?>"><?php esc_html_e( 'New Specials', 'speck-modern-theme' ); ?></a>
-			<a class="speck-btn speck-btn--block" href="https://www.speckdealerships.com/service"><?php esc_html_e( 'Service', 'speck-modern-theme' ); ?></a>
+			<a class="speck-btn speck-btn--block" href="<?php echo esc_url( speck_footer_link( 'speck_hero_locations_url', '#our-dealerships' ) ); ?>"><?php esc_html_e( 'Locations', 'speck-modern-theme' ); ?></a>
+			<a class="speck-btn speck-btn--block" href="<?php echo esc_url( speck_footer_link( 'speck_hero_specials_url', home_url( '/specials/' ) ) ); ?>"><?php esc_html_e( 'New Specials', 'speck-modern-theme' ); ?></a>
+			<a class="speck-btn speck-btn--block" href="<?php echo esc_url( speck_footer_link( 'speck_hero_service_url', 'https://www.speckdealerships.com/service' ) ); ?>"><?php esc_html_e( 'Service', 'speck-modern-theme' ); ?></a>
 		</div>
 	</div>
 </section>
