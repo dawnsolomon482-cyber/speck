@@ -1,0 +1,10 @@
+Speck Modern Theme - Live Preview
+==================================
+
+https://speck-preview.vercel.app
+
+Ito ang preview link na ginagamit para ipakita ang homepage design
+kay boss (Chris Collins Inc / Speck Family Dealerships).
+
+GitHub repo (buong theme code + files):
+https://github.com/dawnsolomon482-cyber/speck
