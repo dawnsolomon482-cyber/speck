@@ -194,6 +194,10 @@ function speck_customize_register( $wp_customize ) {
 			'label'   => __( 'About section: "Learn More" button', 'speck-modern-theme' ),
 			'default' => home_url( '/about-us/' ),
 		),
+		'speck_blog_button_url' => array(
+			'label'   => __( 'Blog section: "View All Articles" button', 'speck-modern-theme' ),
+			'default' => get_option( 'page_for_posts' ) ? get_permalink( get_option( 'page_for_posts' ) ) : home_url( '/blog/' ),
+		),
 	);
 
 	foreach ( $button_links as $setting => $args ) {

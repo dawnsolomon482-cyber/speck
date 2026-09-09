@@ -22,7 +22,8 @@ if ( ! $speck_blog_query->have_posts() ) {
 	return;
 }
 
-$speck_blog_archive_url = get_option( 'page_for_posts' ) ? get_permalink( get_option( 'page_for_posts' ) ) : home_url( '/blog/' );
+$speck_blog_archive_fallback = get_option( 'page_for_posts' ) ? get_permalink( get_option( 'page_for_posts' ) ) : home_url( '/blog/' );
+$speck_blog_archive_url      = speck_footer_link( 'speck_blog_button_url', $speck_blog_archive_fallback );
 ?>
 <section class="speck-blog">
 	<div class="speck-container">
