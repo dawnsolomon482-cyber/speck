@@ -247,7 +247,7 @@ function speck_footer_link( $setting, $fallback_url = '#' ) {
  * [speck_specials] [speck_financing] [speck_service] [speck_about].
  */
 function speck_register_section_shortcodes() {
-	$sections = array( 'hero', 'brands', 'dealerships', 'specials', 'financing', 'service', 'about' );
+	$sections = array( 'hero', 'brands', 'dealerships', 'specials', 'financing', 'service', 'about', 'blog' );
 	foreach ( $sections as $section ) {
 		add_shortcode(
 			'speck_' . $section,

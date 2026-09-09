@@ -394,6 +394,128 @@
     align-self: flex-start;
 }
 
+/* Latest From The Blog: card grid shared by the homepage section and the
+   Blog archive/pagination page (index.php), so both look identical. */
+.speck-home .speck-blog {
+    background: var(--speck-white);
+}
+.speck-blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-bottom: 40px;
+    text-align: left;
+}
+@media (max-width: 900px) {
+    .speck-blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    .speck-blog-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.speck-blog-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--speck-white);
+    border: 1px solid var(--speck-border);
+    border-radius: var(--speck-radius);
+    overflow: hidden;
+    box-shadow: var(--speck-shadow);
+    color: var(--speck-secondary);
+    transition: transform 0.15s ease;
+}
+.speck-blog-card:hover {
+    transform: translateY(-4px);
+}
+.speck-blog-card__image {
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+}
+.speck-blog-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.speck-blog-card__body {
+    padding: 20px 24px 28px;
+}
+.speck-blog-card__date {
+    margin: 0 0 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--speck-primary);
+}
+.speck-blog-card__title {
+    margin: 0 0 10px;
+    font-size: 1.25rem;
+}
+.speck-blog-card__excerpt {
+    margin: 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Blog archive (index.php, the WP "Posts page") and single article view */
+.speck-archive {
+    padding: 60px 0 100px;
+}
+.speck-archive__title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 0.7em;
+}
+.speck-archive__pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.speck-archive__pagination .page-numbers {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid var(--speck-border);
+    border-radius: var(--speck-radius);
+    color: var(--speck-secondary);
+}
+.speck-archive__pagination .page-numbers.current {
+    background: var(--speck-primary);
+    color: var(--speck-white);
+    border-color: var(--speck-primary);
+}
+.speck-single {
+    padding: 60px 0 100px;
+    max-width: 800px;
+}
+.speck-single__header h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 0.3em;
+}
+.speck-single__meta {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 2em;
+}
+.speck-single__thumbnail img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--speck-radius);
+    margin-bottom: 2em;
+}
+.speck-single__content {
+    font-size: 1.1rem;
+    line-height: 1.75;
+}
+.speck-single__content p {
+    margin-bottom: 1.4em;
+}
+
 /* Footer: a solid brand-color social bar, then a thin white credit line
    (no dark panel) so the footer always matches the rest of the site's
    fixed white/red branding. */
