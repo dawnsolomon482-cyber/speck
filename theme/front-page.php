@@ -2,7 +2,7 @@
 /**
  * Homepage template.
  * Always renders the coded Speck homepage sections below (hero, brands,
- * dealerships, specials, financing, service, about, blog) -- whatever is
+ * dealerships, blog, specials, financing, service, about) -- whatever is
  * saved in the "Home" page's own content editor is intentionally ignored,
  * so pasting or editing text there can never hide or replace the homepage
  * design. To customize a section's design, edit its file under
@@ -25,7 +25,7 @@ get_header();
 	 * (not this one) via Elementor's Shortcode widget. This homepage itself
 	 * always renders every section below, in this order.
 	 */
-	foreach ( array( 'hero', 'brands', 'dealerships', 'specials', 'financing', 'service', 'about', 'blog' ) as $speck_section ) {
+	foreach ( array( 'hero', 'brands', 'dealerships', 'blog', 'specials', 'financing', 'service', 'about' ) as $speck_section ) {
 		get_template_part( 'template-parts/sections/' . $speck_section );
 	}
 	?>
